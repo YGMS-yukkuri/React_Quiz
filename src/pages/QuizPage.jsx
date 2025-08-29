@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../components/Button/Button";
 import Display from "../components/Display/Display"
 import quizData from "../data/quiz"
@@ -21,7 +21,7 @@ export default function QuizPage() {
     }
 
     useEffect(() => {
-        if(answerLogs.length === MAX_QUIZ_LEN){
+        if (answerLogs.length === MAX_QUIZ_LEN) {
             const correctNum = answerLogs.filter((answer) => {
                 return answer === true;
             })
@@ -32,15 +32,17 @@ export default function QuizPage() {
                 }
             });
         }
-    },[answerLogs])
-    
+    }, [answerLogs])
+
     return (
         <>
-            <Display>
-                {`Q1 ${quizData[quizIndex].question}`}
-            </Display>
             {
-                quizData[quizIndex].options.map((option, index) => {
+                quizData[quizIndex] && <Display>
+                    {`Q1 ${quizData[quizIndex].question}`}
+                </Display>
+            }
+            {
+                quizData[quizIndex] && quizData[quizIndex].options.map((option, index) => {
                     return (
                         <Button key={`option-${index}`} onClick={() => handleClick(index)}>
                             {option}
