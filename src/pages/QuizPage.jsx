@@ -13,11 +13,11 @@ export default function QuizPage() {
 
     const handleClick = (clickedIndex) => {
         if (clickedIndex === quizData[quizIndex].answerIndex) {
-            setAnswerLogs((prev) => [...prev, true])
+            setAnswerLogs(prev => [...prev, true])
         } else {
-            setAnswerLogs((prev) => [...prev, false])
+            setAnswerLogs(prev => [...prev, false])
         }
-        setQuizIndex((prev) => prev + 1);
+        setQuizIndex(prev => prev + 1);
     }
 
     useEffect(() => {
@@ -28,17 +28,17 @@ export default function QuizPage() {
             navigation(ROUTES.RESULT, {
                 state: {
                     maxQuizLen: MAX_QUIZ_LEN,
-                    correctNum: correctNum
+                    correctNumLen: correctNum.length
                 }
             });
         }
-    }, [answerLogs])
+    }, [answerLogs, MAX_QUIZ_LEN, navigation]);
 
     return (
         <>
             {
                 quizData[quizIndex] && <Display>
-                    {`Q1 ${quizData[quizIndex].question}`}
+                    {`Q${quizIndex + 1}. ${quizData[quizIndex].question}`}
                 </Display>
             }
             {
