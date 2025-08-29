@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Button from "../components/Button/Button";
 import Display from "../components/Display/Display"
 import quizData from "../data/quiz"
