@@ -1,28 +1,18 @@
 const quizData = [
     {
-        question: "Q1",
-        options: ["Select1", "Select2", "Select3", "Select4"],
+        question: "魔法つかいプリキュア！の主人公が変身するのは？",
+        options: ["キュアミラクル", "キュアマジカル", "キュアフェリーチェ", "キュアリンクル"],
         answerIndex: 0
     },
     {
-        question: "Q2",
-        options: ["Select1", "Select2", "Select3", "Select4"],
+        question: "わんだふる！な主人公は？",
+        options: ["犬飼こむぎ", "野乃はな", "朝比奈みらい", "猫屋敷まゆ"],
         answerIndex: 0
     },
     {
-        question: "Q3",
-        options: ["Select1", "Select2", "Select3", "Select4"],
-        answerIndex: 0
-    },
-    {
-        question: "Q4",
-        options: ["Select1", "Select2", "Select3", "Select4"],
-        answerIndex: 0
-    },
-    {
-        question: "Q5",
-        options: ["Select1", "Select2", "Select3", "Select4"],
-        answerIndex: 0
+        question: "キュアウイングが登場するシリーズは？",
+        options: ["トロピカル～ジュ！プリキュア", "ひろがるスカイ！プリキュア", "キミとアイドルプリキュア♪", "わんだふるぷりきゅあ！"],
+        answerIndex: 1
     }
 ];
 
